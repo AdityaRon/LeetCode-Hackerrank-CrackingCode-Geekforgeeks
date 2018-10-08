@@ -8,3 +8,16 @@ def maximum_sum(arr):
         maxsum = max(cursum,maxsum)
         i+=1
     return(maxsum)
+
+##alternative solution
+from sys import maxint
+def maximum_sum(arr):
+    cursum = -maxint - 1
+    maxsum = 0
+    for i in arr:
+        cursum = maxsum + i
+        if maxsum < cursum:
+            maxsum = cursum
+        if cursum < 0:
+            cursum = 0
+    return(maxsum)
