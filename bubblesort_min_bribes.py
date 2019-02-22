@@ -17,8 +17,7 @@ def minimumBribes(Q):
         # First check if any P is more than two ahead of 
         # its original position
         if P - i > 2:
-            print("Too chaotic")
-            return
+            return("Too chaotic")
         #
         # From here on out, we don't care if P has moved
         # forwards, it is better to count how many times
@@ -39,4 +38,4 @@ def minimumBribes(Q):
         for j in range(max(P-1,0),i):
             if Q[j] > P:
                 moves += 1
-    print(moves)
+    return(moves)
