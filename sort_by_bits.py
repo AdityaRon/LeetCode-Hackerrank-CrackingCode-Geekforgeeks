@@ -4,7 +4,7 @@ class Solution:
         result = []
         for i in arr:
             result.append((bin(i).count("1"), i))
-        sorted_result = sorted(result, key = lambda x: (x[0],x) )
+        sorted_result = sorted(result, key = lambda x: (x[0],x[1]) )
         print(sorted_result)
         return ([i[1] for i in sorted_result])
         
