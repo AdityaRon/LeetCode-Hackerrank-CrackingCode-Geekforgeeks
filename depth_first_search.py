@@ -8,13 +8,15 @@ graph = {
     'F' : []
 }
 
-visited = set()
-result = set()
-def dfs(graph, visited, node):
-    if node not in visited:
-        visited.add(node)
-        result.add(node)
-        for neighbor in graph[node]:
-            if neighbor not in visited:
+
+def dfs_path(graph):
+    visited = set()
+    result = []
+    def dfs(graph, visited, node):
+        if node not in visited:
+            visited.add(node)
+            return(node)
+            for neighbor in graph[node]:
                 dfs(graph, visited, neighbor)
-    return result
+    return result.append(dfs_path(graph, visited, 'A'))
+                
