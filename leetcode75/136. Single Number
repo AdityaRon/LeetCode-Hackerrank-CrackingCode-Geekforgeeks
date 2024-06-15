@@ -1,0 +1,14 @@
+class Solution:
+    def singleNumber(self, nums: List[int]) -> int:
+        self.nums = nums
+        result = 0
+        # result = []
+        # for i in nums:
+        #     if i not in result:
+        #         result.append(i)
+        #     else:
+        #         result.remove(i)
+        # return result[0]
+        for num in nums:
+            result ^= num
+        return result
